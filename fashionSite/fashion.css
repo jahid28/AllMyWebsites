@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: aliceblue;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 20px 0;
+  display: flex;
+  background-color: rgb(209, 209, 205);
+}
+
+nav .logo {
+  width: 20vw;
+  /* margin-left: 2rem; */
+  font-family: "Aboreto", cursive;
+  font-size: 2rem;
+  /* background-color: crimson; */
+}
+
+nav .list {
+  width: 75vw;
+  /* background-color: aqua; */
+  font-size: 1.5rem;
+  display: flex;
+  /* margin-left: 20rem; */
+}
+
+.list a {
+  text-decoration: none;
+}
+
+li {
+  font-family: "Aboreto", cursive;
+  cursor: pointer;
+  list-style: none;
+  margin-left: 7rem;
+  position: relative;
+  top: 0;
+  color: black;
+  transition: all linear 0.2s;
+  font-weight: 900;
+}
+
+li:hover {
+  color: rgb(156, 60, 60);
+  top: -3px;
+}
+
+.cart {
+  /* background-color: aqua; */
+  cursor: pointer;
+  float: right;
+  /* margin-left: 17rem; */
+  margin-top: 10px;
+  transform: scale(1.6);
+  transition: all linear 0.3s;
+}
+
+.cart:hover {
+  color: rgb(102, 100, 100);
+}
+
+.hero {
+  width: 100vw;
+  display: flex;
+  /* background-color: rgb(40, 121, 203); */
+  /* z-index: -88; */
+}
+
+.image {
+  position: relative;
+  /* right: -3rem; */
+  top: -5rem;
+  width: 50vw;
+  /* background-color: aqua; */
+  /* z-index: 9; */
+}
+
+.image img {
+  float: right;
+  width: 50vw;
+  border-radius: 20px;
+}
+
+.welcome {
+  /* background-color: aqua; */
+  width: 50vw;
+  /* margin-left: 10rem; */
+}
+
+.welcome p {
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  top: 13rem;
+  color: rgb(51, 51, 51);
+}
+.welcome button {
+  position: relative;
+  top: 15rem;
+  left: 21vw;
+  background-color: rgb(241, 106, 106);
+  border-radius: 10px;
+  padding: 10px 30px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: all linear 0.3s;
+}
+
+.welcome button:hover {
+  background-color: rgb(147, 57, 57);
+}
+
+.headline {
+  color: rgb(156, 60, 60);
+  font-size: 10rem;
+  font-family: "Qwitcher Grypen", cursive;
+}
+
+.shop {
+  padding-bottom: 10rem;
+  /* background-color: rgb(208, 209, 211); */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.shopname {
+  text-align: center;
+  font-family: "Aboreto", cursive;
+  font-size: 4rem;
+}
+.card {
+  border-radius: 20px;
+  display: flex;
+  width: 32rem;
+  margin-left: 8vw;
+  margin-top: 6rem;
+  transition: all linear 0.3s;
+  background-color: rgb(233, 108, 108);
+}
+
+.card:hover {
+  box-shadow: 0 0 20px 0px grey;
+  transform: scale(1.1);
+}
+
+.card img {
+  border-radius: 20px;
+  width: 15rem;
+  /* height: 15rem; */
+}
+
+.detail {
+  /* height: 1rem; */
+  margin-top: 9rem;
+}
+
+.detail p {
+  font-size: 2rem;
+  font-family: "Aboreto", cursive;
+}
+
+.detail button {
+  background-color: aliceblue;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 25px;
+  margin-left: 4rem;
+  transition: all linear 0.3s;
+  cursor: pointer;
+}
+
+.detail button:hover {
+  background-color: rgb(169, 173, 176);
+}
+
+.message {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.message input {
+  width: 35vw;
+  padding: 10px;
+  margin-top: 2rem;
+  border-radius: 10px;
+  margin-left: 32vw;
+}
+
+.message textarea {
+  width: 35vw;
+  padding: 10px;
+  margin-top: 2rem;
+  border-radius: 10px;
+  margin-left: 32vw;
+}
+
+.socials {
+  background-color: black;
+  padding: 3rem 0;
+  margin-top: 3rem;
+}
+
+.socials i {
+  color: white;
+  cursor: pointer;
+  margin-left: 6rem;
+  transform: scale(2);
+  transition: all linear 0.3s;
+}
+
+.socials i:hover {
+  color: rgb(248, 139, 139);
+}
+
+.contact .head {
+  text-align: center;
+  font-family: "Aboreto", cursive;
+  font-size: 4rem;
+}
+
+@media (max-width: 1350px) {
+  .card {
+    width: 25rem;
+  }
+  .detail p {
+    font-size: 1.3rem;
+  }
+  .detail button {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 20rem;
+    margin-left: 4vw;
+  }
+  .card img {
+    width: 10rem;
+  }
+  .detail p {
+    font-size: 1.3rem;
+  }
+  .detail button {
+    margin-left: 2rem;
+  }
+  .detail {
+    margin-top: 5rem;
+  }
+
+  .headline {
+    font-size: 5rem;
+  }
+  .contact .head {
+    font-size: 3rem;
+  }
+  nav .logo {
+    font-size: 2.7vw;
+  }
+  nav .list {
+    font-size: 2.3vw;
+  }
+  li {
+    margin-left: 3rem;
+  }
+  .shopname {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .socials i {
+    margin-left: 5vw;
+    transform: scale(1.5);
+  }
+
+  .socials {
+    padding: 1rem 0;
+  }
+
+  .card {
+    margin-top: 2rem;
+
+    width: 40vw;
+  }
+  .card img {
+    width: 20vw;
+  }
+  .detail p {
+    font-size: 0.9rem;
+  }
+  .detail button {
+    margin-left: 0rem;
+    transform: scale(0.8);
+  }
+
+  .detail {
+    margin-top: 10vw;
+  }
+
+  .message input,
+  .message textarea {
+    width: 70vw;
+    margin-left: 13vw;
+  }
+
+  .welcome p {
+    font-size: 1.2rem;
+    top: 10rem;
+  }
+  .headline {
+    font-size: 4rem;
+  }
+
+  .welcome button {
+    top: 11rem;
+    left: 15vw;
+  }
+
+  .shop {
+    padding-bottom: 4rem;
+  }
+  .shopname {
+    font-size: 8vw;
+  }
+
+  .contact .head {
+    font-size: 8vw;
+  }
+  
+}
+
+
+@media(max-width:470px){
+
+
+  .headline {
+    font-size: 10vw;
+  }
+  .welcome p {
+    font-size: 3vw;
+    top: 20vw;
+  }
+   .welcome button {
+    top: 25vw;
+    transform: scale(.8);
+    left: 11vw;
+  }
+
+  .image img {
+    width: 40vw;
+    position: relative;
+    top: 14vw;
+  }
+
+  .cart{
+    transform: scale(1);
+  }
+  .detail p {
+    font-size: 3vw;
+  }
+  .detail button {
+    transform: scale(0.6);
+    margin-left: -1rem;
+
+  }
+
+}
