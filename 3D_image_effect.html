@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    img{
+        width: 106%;
+        height: 106%;
+        position: fixed;
+        top: 0;
+        z-index: -100;
+        top: -3%;
+        left: -3%;
+    }
+</style>
+<body>
+    <img id="img" src="pexels-simon-berger-1323550.jpg" alt="">
+    
+</body>
+
+<script>
+    const screenWidth=window.screen.width
+    const screenHeight=window.screen.height
+
+    window.addEventListener("mousemove",function(e){
+        let x=e.screenX
+        let y=e.screenY
+        let xperc=(x/screenWidth)*100
+        let yperc=(y/screenHeight)*100
+
+        document.getElementById("img").style.left=`-${xperc*(6/100)}%`
+        document.getElementById("img").style.top=`-${yperc*(6/100)}%`
+    })
+
+
+</script>
+</html>
