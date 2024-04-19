@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cinzel&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    *::selection{
+    background-color: rgb(0, 0, 0);
+    color: rgb(1, 0, 0);
+}
+    body{
+        background-color: rgb(245, 209, 89);
+    }
+
+    #cursor {
+    position: fixed;
+    font-size: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 400;
+    /* background-color: rgb(106, 177, 106); */
+    transition: width linear .2s, height linear .2s;
+    /* mix-blend-mode: difference; */
+    /* background: url(excited.gif) no-repeat center; */
+    border: 2px solid rgb(0, 0, 0);
+    /* box-shadow: 0px 0px 20px 2px rgb(125, 255, 74); */
+}
+
+nav {
+    display: flex;
+    background-color: blue;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    font-family: 'Bungee Spice', cursive;
+    /* color: white; */
+    /* background-color: white; */
+    /* border: 2px solid red; */
+    font-size: 2rem;
+
+}
+
+nav ul {
+    /* border: 2px solid red; */
+    display: flex;
+    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+nav ul a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    list-style: none;
+    text-decoration: none;
+    /* color: white; */
+    /* background-image: linear-gradient(to right, #ffbb00, #00ff84); */
+    /* background-clip: text; */
+    /* -webkit-background-clip: text;  */
+    /* color: transparent; */
+    color: yellow;
+    /* -webkit-text-stroke-width: .5px; */
+
+    list-style: none;
+    /* border: 2px solid red; */
+    cursor: pointer;
+    text-shadow: 5px 5px 3px black;
+
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    font-size: 3rem;
+color: rgb(116, 36, 36);    
+text-align: center;
+
+}
+
+p{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+a{
+    text-decoration: none;
+}
+#insta{
+    color: rgb(255, 72, 240);
+}
+#lin{
+    color: rgb(36, 129, 251);
+}
+#yt{
+    color: rgb(229, 54, 54);
+}
+#git{
+    color: rgb(163, 53, 185);
+}
+
+#allContact{
+    background: url(ben.gif) no-repeat center;
+    display: grid;
+    place-items: center;
+}
+
+img{
+    width: 20rem;
+}
+
+#cont{
+    display: grid;
+    place-items: center;
+}
+
+
+</style>
+<body>
+
+    <div id="cursor"></div>
+
+    <nav>
+        <h2 id="logo">2000 Era</h2>
+        <ul id="navItems">
+            <a class="btn" href="./index.html">Home</a>
+            <a class="btn" href="./about.html">About</a>
+            <a class="btn" href="./contact.html">Contact</a>
+        </ul>
+    </nav>
+
+    <h1>Lets see some info about this website</h1>
+
+  <div id="cont">
+      <img src="about.gif" alt="">
+    <p>Yup, thats it</p>
+
+  </div>
+
+
+    
+</body>
+<script>
+    document.addEventListener("mousemove", function (e) {
+    document.getElementById("cursor").style.left = e.clientX + "px";
+    document.getElementById("cursor").style.top = e.clientY + "px";
+});
+
+document.querySelectorAll(".atag").forEach((e) => {
+    e.addEventListener("mouseover", function () {
+        // console.log(e.c)
+        document.getElementById("cursor").style.width = '150px'
+        document.getElementById("cursor").style.height = '150px'
+        document.getElementById("cursor").style.background = `url(${e.id}.png) center`
+        document.getElementById("cursor").style.backgroundSize = 'cover'
+        
+    })
+})
+document.querySelectorAll(".atag").forEach((e) => {
+    e.addEventListener("mouseleave", function () {
+        // console.log(e.c)
+        document.getElementById("cursor").style.width = '30px'
+        document.getElementById("cursor").style.height = '30px'
+        document.getElementById("cursor").style.background = `none`
+        document.getElementById("cursor").style.backgroundSize = 'cover'
+    })
+})
+
+
+
+document.querySelectorAll(".btn").forEach((e) => {
+    e.addEventListener("mouseover", function () {
+        // console.log(e.c)
+        console.log(e.className)
+        document.getElementById("cursor").style.width = '80px'
+        document.getElementById("cursor").style.height = '80px'
+        document.getElementById("cursor").style.background = `url(clickBtn.gif) center`
+        document.getElementById("cursor").style.backgroundSize = 'cover'
+        document.getElementById("cursor").style.border = 'none'
+    })
+})
+document.querySelectorAll(".btn").forEach((e) => {
+    e.addEventListener("mouseleave", function () {
+        // console.log(e.c)
+        console.log(e.className)
+        document.getElementById("cursor").style.width = '30px'
+        document.getElementById("cursor").style.height = '30px'
+        document.getElementById("cursor").style.background = `none`
+        document.getElementById("cursor").style.backgroundSize = 'cover'
+        document.getElementById("cursor").style.border = '2px solid black'
+    })
+})
+
+</script>
+</html>

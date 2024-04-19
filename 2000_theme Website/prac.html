@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Scroll Effect</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      overflow-x: hidden; /* Hide horizontal overflow */
+    }
+
+    .section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #horizontal-scroll {
+      overflow-x: auto; /* Enable horizontal scrolling for this section */
+      white-space: nowrap; /* Prevent items from wrapping to new lines */
+    }
+
+    .horizontal-content {
+      display: inline-block; /* Create a horizontal layout for the items */
+      padding: 20px;
+    }
+
+    .horizontal-item {
+      display: inline-block;
+      width: 200px;
+      height: 150px;
+      background-color: #f0f0f0;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section" id="normal-scroll">
+      <!-- Your content before the horizontal scrolling section -->
+      <h2>Normal Scrolling Section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="section" id="horizontal-scroll">
+      <!-- Your content for the horizontal scrolling section -->
+      <h2>Horizontal Scrolling Section</h2>
+      <div class="horizontal-content">
+        <!-- Add your horizontal scrolling content here -->
+        <div class="horizontal-item">Item 1</div>
+        <div class="horizontal-item">Item 2</div>
+        <div class="horizontal-item">Item 3</div>
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+
+    <div class="section" id="normal-scroll-2">
+      <!-- Your content after the horizontal scrolling section -->
+      <h2>Normal Scrolling Section 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+
+  <script>
+    const horizontalScrollSection = document.getElementById('horizontal-scroll');
+
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.scrollY;
+      const horizontalScrollStart = horizontalScrollSection.offsetTop;
+      const horizontalScrollEnd = horizontalScrollStart + horizontalScrollSection.clientHeight;
+
+      if (scrollTop >= horizontalScrollStart && scrollTop <= horizontalScrollEnd) {
+        // Enable horizontal scrolling
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflowX = 'scroll';
+      } else {
+        // Disable horizontal scrolling and revert to vertical scrolling
+        document.body.style.overflow = '';
+        document.documentElement.style.overflowX = '';
+      }
+    });
+  </script>
+</body>
+</html>

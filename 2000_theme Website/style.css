@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+*::selection{
+    background-color: rgb(0, 0, 0);
+    color: rgb(1, 0, 0);
+}
+
+#cursor {
+    position: fixed;
+    font-size: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    /* background-color: rgb(106, 177, 106); */
+    transition: width linear .2s, height linear .2s;
+    /* mix-blend-mode: difference; */
+    /* background: url(excited.gif) no-repeat center; */
+    /* border: 2px solid rgb(0, 0, 0); */
+    /* box-shadow: 0px 0px 20px 2px rgb(125, 255, 74); */
+}
+
+nav {
+    display: flex;
+    background-color: blue;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#logo {
+    font-family: 'Bungee Spice', cursive;
+    /* color: white; */
+    /* background-color: white; */
+    /* border: 2px solid red; */
+    font-size: 2rem;
+
+}
+
+nav ul {
+    /* border: 2px solid red; */
+    display: flex;
+    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+nav ul a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    list-style: none;
+    text-decoration: none;
+    /* color: white; */
+    /* background-image: linear-gradient(to right, #ffbb00, #00ff84); */
+    /* background-clip: text; */
+    /* -webkit-background-clip: text;  */
+    /* color: transparent; */
+    color: yellow;
+    /* -webkit-text-stroke-width: .5px; */
+
+    list-style: none;
+    /* border: 2px solid red; */
+    cursor: pointer;
+    text-shadow: 5px 5px 3px black;
+
+}
+
+/* nav ul li:hover {
+    animation: hover infinite 1s linear;
+}
+
+@keyframes hover {
+    0% {
+        font-family: 'Bungee Spice', cursive;
+
+    }
+
+    25% {
+        font-family: 'Cinzel', serif;
+
+    }
+
+    50% {
+        font-family: 'Pacifico', cursive;
+
+    }
+
+    75% {
+        font-family: Georgia, 'Times New Roman', Times, serif
+    }
+
+    100% {
+        font-family: 'Pacifico', cursive;
+
+    }
+
+
+} */
+
+#page1 {
+   
+    /* display: flex; */
+    width: 100vw;
+    height: 100vh;
+    /* border: 2px solid red; */
+    background-color: rgb(213, 120, 221);
+}
+/* #page1 div{
+    align-self: center;
+
+} */
+#page1_h_1 {
+color: transparent;
+-webkit-text-stroke-color: rgb(255, 255, 255);
+-webkit-text-stroke-width: 1px;
+text-align: center;
+font-size: 8rem;
+}
+
+#page1_h_2 {
+    color: transparent;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 1px;
+   text-align: center;
+    font-size: 8rem;
+}
+
+#gifcont{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    /* border: 2px solid red; */
+    /* margin-top: auto; */
+}
+
+#page1 img {
+    width: 30rem;
+    /* height: fit-content; */
+    /* align-self: center; */
+    /* margin-left: auto; */
+}
+.subHead{
+    font-size: 5rem;
+    color: rgb(71, 145, 174);
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+#empty{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+
+#phoneCont{
+    z-index: 1;
+    position: relative;
+    background-color: rgb(59, 60, 59);
+    height: 100vh; 
+/* border: 2px solid red; */
+/* width: fit-content; */
+width: fit-content;
+    /* overflow-x: auto;  */
+    /* white-space: nowrap;  */
+}
+
+  
+
+#nokia{
+    /* border: 2px solid rgb(40, 94, 48); */
+}
+
+.image-container {
+    /* display: inline-block; */
+    /* position: relative; */
+    /* left: -500px; */
+    display: flex; 
+    /* align-items: flex-start;  */
+    /* height: 30vh;  */
+    height: 100%; 
+  }
+  
+
+  .image-container img {
+    /* display: inline-block; */
+    /* background-color: rgb(137, 176, 107); */
+
+    /* width: auto;  */
+    height: 100%; 
+    /* object-fit: cover;  */
+  }
+
+#cartoonCont{
+    background-color: rgb(169, 214, 142);
+}
+
+#cartoonCont div{
+    display: flex;
+}
+#cartoonCont ul{
+
+
+}
+#cartoonCont ul li{
+    width: fit-content;
+    font-size: 3rem;
+    /* font-family: 'Pacifico', cursive; */
+    cursor: pointer;
+    margin-bottom: 4rem;
+
+}
+#cartoonCont img{
+    margin-left: auto;
+    height: fit-content;
+    align-self: center;
+
+}
+
+#dvdCont{
+    /* border: 2px solid yellow; */
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(186, 173, 102);
+}
+
+#dvdhead{
+    width: 100%;
+    background-color: rgb(186, 173, 102);
+    text-align: center;
+    align-self: center;
+    font-size: 5rem;
+    /* margin-top: 2rem; */
+}
+
+
+.dvd-logo {
+    z-index: 0;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the logo on the screen */
+  }
+
+
+  
+#tvCont{
+    /* border: 2px solid rgb(255, 0, 179); */
+    height: 200vh;
+    width: 100%;
+    background-color: rgb(100, 63, 95);
+    /* display: grid;
+    place-items: center; */
+}
+#tv{
+    /* z-index: 98; */
+    font-size: 13rem;
+    text-align: center;
+    /* font-family: 'Cinzel', serif; */
+    font-weight: 900;
+    text-shadow: 
+    0px 12rem 0px rgb(50, 50, 50),
+    0px 24rem 0px rgb(99, 98, 98),
+    0px 36rem 0px rgb(156, 156, 156),
+    0px 48rem 0px rgb(210, 210, 210),
+    0px 60rem 0px rgb(234, 234, 234),
+    0px 72rem 0px rgb(255, 255, 255)
+
+
+    ;
+
+}
+
+#imgCont{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+#tvimg{
+    width: 20rem;
+    /* border: 2px solid red; */
+    /* text-align: center; */
+    /* justify-self: center; */
+    /* align-self: center; */
+    position: relative;
+    top: 0;
+    /* z-index: 97; */
+}
+
+#music{
+    /* border: 2px solid yellow; */
+    height: 200vh;
+    width: 100%;
+    background-color: rgb(96, 70, 87);
+}
+
+#musicp{
+    float: right;
+    position: relative;
+    
+    width: 30rem;
+}
+
+#tone1{
+    width: 10rem;
+    float: right;
+    animation: tone infinite linear .7s;
+}
+#tone2{
+    width: 10rem;
+    float: right;
+    position: relative;
+    top: 10rem;
+    left: 15rem;
+    animation: tone infinite linear .5s;
+}
+
+@keyframes tone {
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate: 20deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+    
+}
